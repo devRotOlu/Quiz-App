@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Quiz App</title>
+    <link rel="stylesheet" href="quizApp.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+</head>
+
+<body>
+
+ 
+
+    <section id="homePage">
+
+        <div  id="homePage-container">
+
+            <h1>Test Your Knowledge</h1>
+
+            <div id="login-container">
+            
+                <div></div>
+                <div id="logIn">
+                    <form action="">
+                        <input class="inputs input-text" type="text" name="firstName" placeholder="Enter Your FirstName" id="firstName">
+                        <input class="inputs input-text" type="text" name="LastName" placeholder="Enter Your FirstName" id="lastName">
+                        <input class="inputs" type="button" value="Start Quiz" id="startQuizBtn">
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+
+    <section  id="backEnd" style="display: none;">
+
+        <div id="backEnd-container">
+
+            <div>
+
+                <div id="questions" class="questions">
+
+                    <div id="questionsHeading">
+                        <h2 class="headingTags">Add Questions</h2>
+                        <a href=""><button type="submit" class="buttons button3">Logout</button></a>
+                    </div>
+
+                    <div id="questionsBody"> 
+
+                        <button type="button" class="buttons button2">Update</button>
+                        <button type="button" class="buttons button2">Delete</button>
+
+                        <div>
+                            <input type="text" placeholder="Type questions" id="newQuestion">
+
+                            <div id="overallOptionContainer">
+                                <div>
+                                    <input type="radio" id="option0" name="answers">
+                                   <label for="option0">
+                                       <input type="text" class="optionAnswer">
+                                   </label>
+                               </div>
+   
+                               <div>
+                                   <input type="radio" id="option1" name="answers">
+                                  <label for="option1">
+                                      <input type="text" class="optionAnswer"> 
+                                  </label>
+                              </div>
+                              
+                            </div>
+                        
+                            <button type="button" class="buttons" id="questionInsertButton"> Insert</button>
+
+                        </div>
+
+                        <diV id="timeForQuiz">
+                            <span>Alloted time for quiz (minutes) :</span>
+
+                            <span id="timeInput">
+                                <span>
+                                    <input type="text" id="testTime">
+                                </span>
+                                
+                            </span>
+                        
+                        </diV>
+
+                    </div>
+
+
+                    <button type="button" class="buttons" id="questnClearBtn">Clear List</button>
+
+                </div>
+
+                <div id="questionBank" class="questions">
+
+
+                </div>
+            </div>
+
+
+
+            <div class="questions" id="resultBorad">
+
+                <div id="resultBorad-heading">
+
+                    <h2 class="headingTags">Results</h2>
+                    <button type="button" class="buttons button3" id="clearResultBtn"> Clear Results</button>
+
+                </div>
+
+                <div id="resultBorad-body">
+
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="testPanel" style="display: none;">
+
+        <div>
+
+            <div id="testContainer">
+
+               <div class="testContainer-body">
+
+                   <div>
+                       <p id="askedQuestionTest"></p>
+                       <span id="timeGlass"></span>
+                    </div>
+
+                   <div id="markIndicator">         
+
+                        <span><i class="fas fa-smile-beam" style="color: yellow;"></i></span>
+                        <span><i class="fas fa-angry" style="color: red;"></i></span>
+
+                        <diV id="marker">
+
+                            <span></span>
+                            <p id="instantAnswerText">
+
+            
+                                <button class="buttons" id="markButton">Next</button>
+
+                            </p>
+
+                        </diV>
+
+                   </div>
+
+                   <div id="optionsWrapper" style="display: block;">
+
+
+                   </div>
+
+               </div>
+
+            </div>
+
+            <div id="progressBar">
+
+                <div id="progressBarBody">
+                    <div><p id="progress"></p></div>
+                    <!--<div><span id="progressBarMeter"></span></div>-->
+                    <progress value="5" max="10" style="height: 30px;"></progress>
+                </div>
+
+            </div>
+        
+        </div>
+
+    </section>
+
+    <section id="resultSection" style="display: none;">
+
+        <div id="resultBoard">
+
+            <div id="resultBoardBody">
+
+                <a href=""><button type="button" class="buttons" id="finalLogoutBtn">Logout</button></a>
+                <p id="finalScoreText"></p>    
+
+            </div>
+
+        </div> 
+    
+    </section>
+
+    <script src="/fontawesome/js/all.js"></script>
+    <script src="quizApp.js"></script>
+    
+</body>
+
+</html>
